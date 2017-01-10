@@ -403,7 +403,7 @@
     This service sets up a bunch of signers and validators based on our own keys.
     Replace this keystore's contents for a production deployment.
    -->
-  <b:bean id="defaultSignerService" class="org.mitre.jwt.signer.service.impl.DefaultJwtSigningAndValidationService">
+  <b:bean id="defaultSignerService" class="org.mitre.jwt.signer.service.impl.DefaultJWTSigningAndValidationService">
     <b:constructor-arg name="keyStore">
       <b:bean id="defaultKeyStore" class="org.mitre.jose.keystore.JWKSetKeyStore">
         <b:property name="location" value="file://#{systemEnvironment['PORTAL_HOME']}/keystore.jwks" />
