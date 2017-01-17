@@ -32,8 +32,8 @@ public class PortalOIDCAuthenticationProvider extends OIDCAuthenticationProvider
 		if (result instanceof OIDCAuthenticationToken && result.isAuthenticated()) {
 
 			OIDCAuthenticationToken token = (OIDCAuthenticationToken) result;
-			log.info("OIDCAuthenticationToken: {}", token);
-			log.info("OIDCAuthenticationToken.userInfo: {}", token.getUserInfo().toJson().toString());
+			log.info("Logged in as: {}", token);
+			log.info("Returned userInfo: {}", token.getUserInfo().toJson().toString());
 
 			String username = token.getUserInfo().getEmail();
 
