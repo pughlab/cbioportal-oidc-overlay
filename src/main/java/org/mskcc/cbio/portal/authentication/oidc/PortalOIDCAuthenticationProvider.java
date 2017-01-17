@@ -8,10 +8,13 @@ import org.mitre.openid.connect.model.OIDCAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
-import org.mskcc.cbio.portal.authentication.oidc.PortalOIDCAuthoritiesMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PortalOIDCAuthenticationProvider extends OIDCAuthenticationProvider {
 
+	private static final Logger log = LoggerFactory.getLogger(PortalOIDCAuthenticationProvider.class);
+	
 	private PortalOIDCAuthoritiesMapper authoritiesMapper;
 
 	public PortalOIDCAuthoritiesMapper getAuthoritiesMapper() {
@@ -29,6 +32,8 @@ public class PortalOIDCAuthenticationProvider extends OIDCAuthenticationProvider
 		if (result instanceof OIDCAuthenticationToken && result.isAuthenticated()) {
 
 			OIDCAuthenticationToken token = (OIDCAuthenticationToken) result;
+			log.info("OIDCAuthenticationToken: {}", token);
+			log.info("OIDCAuthenticationToken.userInfo: {}", token.getUserInfo().toJson().toString());
 
 			String username = token.getUserInfo().getEmail();
 
