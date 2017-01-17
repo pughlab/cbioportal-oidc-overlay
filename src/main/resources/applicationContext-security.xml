@@ -288,17 +288,17 @@
   <b:bean id="openIdConnectAuthenticationFilter" class="org.mitre.openid.connect.client.OIDCAuthenticationFilter">
     <b:property name="authenticationManager" ref="authenticationManager" />
     <b:property name="issuerService" ref="issuerService" />
-       <b:property name="serverConfigurationService" ref="serverConfigurationService" />
-       <b:property name="clientConfigurationService" ref="clientConfigurationService" />
-       <b:property name="authRequestOptionsService" ref="authRequestOptionsService" />
-       <b:property name="authRequestUrlBuilder" ref="plainAuthRequestUrlBuilder" />
-     <b:property name="authenticationSuccessHandler" ref="successHandler" />
+    <b:property name="serverConfigurationService" ref="serverConfigurationService" />
+    <b:property name="clientConfigurationService" ref="clientConfigurationService" />
+    <b:property name="authRequestOptionsService" ref="authRequestOptionsService" />
+    <b:property name="authRequestUrlBuilder" ref="plainAuthRequestUrlBuilder" />
+    <b:property name="authenticationSuccessHandler" ref="successHandler" />
   </b:bean>
 
   <b:bean id="successHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
-        <b:property name="defaultTargetUrl" value="/index.do"/>
-        <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
-    </b:bean>
+    <b:property name="defaultTargetUrl" value="/index.do"/>
+    <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
+  </b:bean>
 
   <!--
     Static issuer service, returns the same issuer for every request.
