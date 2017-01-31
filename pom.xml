@@ -4,28 +4,34 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ca.uhnresearch.pughlab</groupId>
   <artifactId>cbioportal-oidc-overlay</artifactId>
-  <version>1.4.0</version>
+  <version>1.4.1</version>
   <packaging>war</packaging>
   <name>cBioPortal overlay with OIDC</name>
 
   <parent>
   	<groupId>org.mskcc.cbio</groupId>
   	<artifactId>master</artifactId>
-  	<version>1.4.0</version>
+  	<version>1.4.1</version>
   </parent>
 
   <dependencies>
     <dependency>
       <groupId>org.mskcc.cbio</groupId>
       <artifactId>cbioportal</artifactId>
-      <version>1.4.0</version>
+      <version>1.4.1</version>
       <type>war</type>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.mskcc.cbio</groupId>
       <artifactId>core</artifactId>
-      <version>1.4.0</version>
+      <version>1.4.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mskcc.cbio</groupId>
+      <artifactId>core</artifactId>
+      <version>1.4.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
