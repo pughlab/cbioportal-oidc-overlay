@@ -293,12 +293,13 @@
     <b:property name="authRequestOptionsService" ref="authRequestOptionsService" />
     <b:property name="authRequestUrlBuilder" ref="plainAuthRequestUrlBuilder" />
     <b:property name="authenticationSuccessHandler" ref="successHandler" />
+    <b:property name="timeSkewAllowance" value="3600" />
   </b:bean>
 
   <b:bean id="successHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
-    <b:property name="defaultTargetUrl" value="/index.do"/>
-    <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
-  </b:bean>
+        <b:property name="defaultTargetUrl" value="/index.do"/>
+        <b:property name="alwaysUseDefaultTargetUrl" value="true"/>
+    </b:bean>
 
   <!--
     Static issuer service, returns the same issuer for every request.
