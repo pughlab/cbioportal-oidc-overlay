@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- meta data -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ca.uhnresearch.pughlab</groupId>
+  <artifactId>cbioportal-oidc-overlay</artifactId>
+  <version>1.4.1</version>
+  <packaging>war</packaging>
+  <name>cBioPortal overlay with OIDC</name>
+
+  <parent>
+  	<groupId>org.mskcc.cbio</groupId>
+  	<artifactId>master</artifactId>
+  	<version>1.4.1</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.mskcc.cbio</groupId>
+      <artifactId>cbioportal</artifactId>
+      <version>1.4.1</version>
+      <type>war</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mskcc.cbio</groupId>
+      <artifactId>core</artifactId>
+      <version>1.4.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mskcc.cbio</groupId>
+      <artifactId>core</artifactId>
+      <version>1.4.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mitre</groupId>
+      <artifactId>openid-connect-client</artifactId>
+      <version>1.2.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.ebaysf.web</groupId>
+      <artifactId>cors-filter</artifactId>
+      <version>1.0.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
