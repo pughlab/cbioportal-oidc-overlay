@@ -293,7 +293,7 @@
     <b:property name="authRequestOptionsService" ref="authRequestOptionsService" />
     <b:property name="authRequestUrlBuilder" ref="plainAuthRequestUrlBuilder" />
     <b:property name="authenticationSuccessHandler" ref="successHandler" />
-    <b:property name="timeSkewAllowance" value="3600" />
+    <b:property name="timeSkewAllowance" value="300" />
   </b:bean>
 
   <b:bean id="successHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
