@@ -36,6 +36,11 @@ public class PortalOIDCAuthenticationProvider extends OIDCAuthenticationProvider
 			log.info("Returned userInfo: {}", token.getUserInfo().toJson().toString());
 
 			String username = token.getUserInfo().getEmail();
+			if (username == null) 
+				username = token.getUserInfo().getPreferredUsername();
+			if (username == null)
+				username = token.getSub();
+			log.info("Identity for permissions: {}", username);
 
 			Collection<GrantedAuthority> portalAuthorities = new ArrayList<GrantedAuthority>();
 
