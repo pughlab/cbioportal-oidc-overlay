@@ -39,7 +39,7 @@ public class PortalOIDCAuthenticationProvider extends OIDCAuthenticationProvider
 			if (username == null) 
 				username = token.getUserInfo().getPreferredUsername();
 			if (username == null)
-				username = token.getSub();
+				username = token.getUserInfo().getSub();
 			log.info("Identity for permissions: {}", username);
 
 			Collection<GrantedAuthority> portalAuthorities = new ArrayList<GrantedAuthority>();
