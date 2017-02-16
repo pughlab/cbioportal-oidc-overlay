@@ -46,7 +46,8 @@ public class PortalOIDCAuthenticationProvider extends OIDCAuthenticationProvider
 
 			portalAuthorities = authoritiesMapper.getPortalAuthorities(username);
 
-			return new OIDCAuthenticationToken(token.getSub(),
+			return new OIDCAuthenticationTokenByUsername(username, 
+					token.getSub(),
 					token.getIssuer(),
 					token.getUserInfo(), 
 					portalAuthorities, 
