@@ -32,6 +32,12 @@
       <groupId>org.mitre</groupId>
       <artifactId>openid-connect-client</artifactId>
       <version>1.2.6</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-test</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.ebaysf.web</groupId>
