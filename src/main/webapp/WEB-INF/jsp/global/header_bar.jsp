@@ -71,7 +71,7 @@
         <% if (authenticationMethod.equals("saml")) { %>
         You are logged in as <sec:authentication property='<%=principal%>' />. <a href="<c:url value="/saml/logout?local=true"/>">Sign out</a>.
         <% } else if (authenticationMethod.equals("openid-connect")) { %>
-       	You are logged in as <sec:authentication property='principal' /> <a href="j_spring_security_logout" class="ui-btn-right">Sign out</a>
+       	You are logged in as <sec:authentication property='<%=principal%>' /> <a href="j_spring_security_logout" class="ui-btn-right">Sign out</a>
         <%} else { %>
         You are logged in as <sec:authentication property='<%=principal%>' />. <a href="j_spring_security_logout">Sign out</a>.
         <% } %>

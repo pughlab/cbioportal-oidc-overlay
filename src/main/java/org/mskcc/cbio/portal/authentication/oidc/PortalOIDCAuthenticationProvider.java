@@ -36,9 +36,9 @@ public class PortalOIDCAuthenticationProvider extends OIDCAuthenticationProvider
 			log.info("Returned userInfo: {}", token.getUserInfo().toJson().toString());
 
 			String username = token.getUserInfo().getEmail();
-			if (username == null) 
+			if (username == null || username.length() == 0) 
 				username = token.getUserInfo().getPreferredUsername();
-			if (username == null)
+			if (username == null || username.length() == 0)
 				username = token.getUserInfo().getSub();
 			log.info("Identity for permissions: {}", username);
 
